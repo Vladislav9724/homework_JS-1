@@ -1,5 +1,5 @@
     
-    let income = 12551;
+    let income = 1000000;
 
     console.log(`Ваш дохід: ${income}$`);
 
@@ -59,9 +59,11 @@
 
     }else if( taxableIncome > rang6){
 
-        fitSum = tax1 * rang1 + tax2 * (taxableIncome - rang1) + tax3 * (taxableIncome - rang2) + tax4 * (taxableIncome - rang3) + tax5 * (taxableIncome - rang4) + tax5 * (taxableIncome - rang5) + tax7 * (taxableIncome - rang6);
+        fitSum = tax1 * rang1 + tax2 * (rang2 - rang1) + tax3 * (rang3 - rang2) + tax4 * (rang4 - rang3) + tax5 * (rang5 - rang4) + tax6 * (rang6 - rang5) + tax7 * (taxableIncome - rang6);
 
     }
+
+    fitSum = Math.round(fitSum * 100) / 100;
 
     console.log(`Сума Вашого податку: ${fitSum}`);
     
